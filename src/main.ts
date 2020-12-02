@@ -4,6 +4,12 @@ import { environment } from './environments/environment';
 
 import { AppModule } from './app/app.module';
 
+import Amplify, { Auth } from 'aws-amplify';
+
+import amplify from './aws-exports';
+
+Amplify.configure(amplify);
+
 if (environment.production) {
   enableProdMode();
 }
